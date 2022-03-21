@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import fr.isen.girou.androiderestaurant.databinding.ActivityHomeBinding
+import java.util.logging.Logger
 
 
 class HomeActivity : AppCompatActivity() {
@@ -15,7 +16,34 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+
+        binding.button.setOnClickListener {
+            val intent = Intent(this, EntreesActivity::class.java)
+            // start your next activity
+            startActivity(intent)
+        }
+
+        binding.button3.setOnClickListener {
+            val intent = Intent(this, PlatsActivity::class.java)
+            // start your next activity
+            startActivity(intent)
+        }
+
+        binding.button4.setOnClickListener {
+            val intent = Intent(this, DessertsActivity::class.java)
+            // start your next activity
+            startActivity(intent)
+        }
+
+        override fun onDestroy(savedInstanceState: Bundle?) {
+            super.onDestroy()
+            val log = Logger.getLogger(HomeActivity::class.java.name)
+            log.warning("Hello World")
+        }
+
     }
 
 
