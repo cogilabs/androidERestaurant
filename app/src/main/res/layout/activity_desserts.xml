@@ -8,12 +8,12 @@
     tools:context=".DessertsActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtDessertsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:fontFamily="cursive"
-        android:text="Desserts"
+        android:text="@string/desserts"
         android:textSize="96sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"

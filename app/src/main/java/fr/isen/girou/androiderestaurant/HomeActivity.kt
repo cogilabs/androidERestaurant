@@ -2,12 +2,11 @@ package fr.isen.girou.androiderestaurant
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
-import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import fr.isen.girou.androiderestaurant.databinding.ActivityHomeBinding
-import java.util.logging.Logger
 
 
 class HomeActivity : AppCompatActivity() {
@@ -20,32 +19,25 @@ class HomeActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        binding.button.setOnClickListener {
+        binding.btnEntree.setOnClickListener {
             val intent = Intent(this, EntreesActivity::class.java)
             // start your next activity
             startActivity(intent)
         }
 
-        binding.button3.setOnClickListener {
+        binding.btnPlats.setOnClickListener {
             val intent = Intent(this, PlatsActivity::class.java)
             // start your next activity
             startActivity(intent)
         }
 
-        binding.button4.setOnClickListener {
+        binding.btnDesserts.setOnClickListener {
             val intent = Intent(this, DessertsActivity::class.java)
             // start your next activity
             startActivity(intent)
         }
 
-        override fun onDestroy(savedInstanceState: Bundle?) {
-            super.onDestroy()
-            val log = Logger.getLogger(HomeActivity::class.java.name)
-            log.warning("Hello World")
-        }
-
     }
-
 
     private fun toastMsg(msg: String?) {
         val toast = Toast.makeText(this, msg, Toast.LENGTH_LONG)
@@ -64,4 +56,15 @@ class HomeActivity : AppCompatActivity() {
         toastMsg("Desserts")
     }
 
+    private val tag = "LogHomeActivity"
+
+    override fun onStop() {
+        super.onStop()
+        Log.i(tag, "Sortie de la page d'acceuil")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.i(tag, "Page d'acceuil détruite")
+    }
 }
