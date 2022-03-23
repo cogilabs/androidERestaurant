@@ -1,7 +1,13 @@
-<resources>
-    <string name="app_name">AndroidERestaurant</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Android e-Restaurant</string>
     <string name="desserts">Desserts</string>
-    <string name="entr_es">Entrées</string>
+    <string name="entrees">Entrées</string>
     <string name="plats">Plats</string>
     <string name="logo">Logo</string>
+    <string name="chargement" />
+    <string-array name="entreesList">
+        <item tools:ignore="Typos">item1</item>
+        <item>item2</item>
+        <item>item3</item>
+    </string-array>
 </resources>

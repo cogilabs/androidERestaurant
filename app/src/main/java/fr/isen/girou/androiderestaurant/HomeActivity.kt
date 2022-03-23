@@ -19,24 +19,25 @@ class HomeActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+
         binding.btnEntree.setOnClickListener {
-            val intent = Intent(this, EntreesActivity::class.java)
-            // start your next activity
-            startActivity(intent)
+            goToCategory(getString(R.string.entrees))
         }
 
         binding.btnPlats.setOnClickListener {
-            val intent = Intent(this, PlatsActivity::class.java)
-            // start your next activity
-            startActivity(intent)
+            goToCategory(getString(R.string.plats))
         }
 
         binding.btnDesserts.setOnClickListener {
-            val intent = Intent(this, DessertsActivity::class.java)
-            // start your next activity
-            startActivity(intent)
+            goToCategory(getString(R.string.desserts))
         }
 
+    }
+
+    private fun goToCategory(categorie: String) {
+        val intent = Intent(this, CategorieActivity::class.java)
+        intent.putExtra("categorie", categorie)
+        startActivity(intent)
     }
 
     private fun toastMsg(msg: String?) {
@@ -60,11 +61,11 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onStop() {
         super.onStop()
-        Log.i(tag, "Sortie de la page d'acceuil")
+        Log.d(tag, "Sortie de la page d'acceuil")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.i(tag, "Page d'acceuil détruite")
+        Log.d(tag, "Page d'acceuil détruite")
     }
 }

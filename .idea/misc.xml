@@ -3,11 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/davgi/AndroidStudioProjects/AndroidERestaurant/app/src/main/res/layout/activity_desserts.xml" value="0.21842105263157896" />
+        <entry key="..\:/Users/davgi/AndroidStudioProjects/AndroidERestaurant/app/src/main/res/layout-v25/item.xml" value="0.1" />
+        <entry key="..\:/Users/davgi/AndroidStudioProjects/AndroidERestaurant/app/src/main/res/layout/activity_categorie.xml" value="0.21842105263157896" />
+        <entry key="..\:/Users/davgi/AndroidStudioProjects/AndroidERestaurant/app/src/main/res/layout/activity_desserts.xml" value="0.1" />
+        <entry key="..\:/Users/davgi/AndroidStudioProjects/AndroidERestaurant/app/src/main/res/layout/activity_detail.xml" value="0.21842105263157896" />
         <entry key="..\:/Users/davgi/AndroidStudioProjects/AndroidERestaurant/app/src/main/res/layout/activity_entrees.xml" value="0.264" />
         <entry key="..\:/Users/davgi/AndroidStudioProjects/AndroidERestaurant/app/src/main/res/layout/activity_home.xml" value="0.264" />
         <entry key="..\:/Users/davgi/AndroidStudioProjects/AndroidERestaurant/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/davgi/AndroidStudioProjects/AndroidERestaurant/app/src/main/res/layout/activity_plats.xml" value="0.21842105263157896" />
+        <entry key="..\:/Users/davgi/AndroidStudioProjects/AndroidERestaurant/app/src/main/res/layout/item.xml" value="0.21842105263157896" />
       </map>
     </option>
   </component>
