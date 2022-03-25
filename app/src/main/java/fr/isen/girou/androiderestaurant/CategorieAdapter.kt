@@ -3,8 +3,10 @@ package fr.isen.girou.androiderestaurant
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import fr.isen.girou.androiderestaurant.model.Item
 
 internal class CategorieAdapter(private var itemsList: ArrayList<Item>,
@@ -13,6 +15,7 @@ internal class CategorieAdapter(private var itemsList: ArrayList<Item>,
 
         internal inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             var itemTextView: TextView = view.findViewById(R.id.itemTextView)
+            var itemLogo: ImageView = view.findViewById(R.id.itemLogo)
         }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -24,6 +27,8 @@ internal class CategorieAdapter(private var itemsList: ArrayList<Item>,
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val item = itemsList[position]
         holder.itemTextView.text = item.name_fr
+
+        Picasso.get().load(item.images[0].ifEmpty { null }).placeholder(R.drawable.ic_launcher_foreground).into(holder.itemLogo)
 
         holder.itemView.setOnClickListener {
             clickListener(item)

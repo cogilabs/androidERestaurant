@@ -1,3 +1,5 @@
+@file:Suppress("UNUSED_PARAMETER")
+
 package fr.isen.girou.androiderestaurant
 
 import android.content.Intent
