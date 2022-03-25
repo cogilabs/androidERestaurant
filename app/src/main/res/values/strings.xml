@@ -11,4 +11,6 @@
         <item>item2</item>
         <item>item3</item>
     </string-array>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="image_du_carousel">Image du carousel</string>
 </resources>

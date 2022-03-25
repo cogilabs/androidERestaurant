@@ -31,7 +31,11 @@ internal class CategorieAdapter(private var itemsList: ArrayList<Item>,
         val prix: String = item.prices[0].price + "€"
         holder.priceTextView.text = prix
 
-        Picasso.get().load(item.images[0].ifEmpty { null }).placeholder(R.drawable.ic_launcher_foreground).into(holder.itemLogo)
+        Picasso
+            .get()
+            .load(item.images[0].ifEmpty { null })
+            .placeholder(R.drawable.previewfailed)
+            .into(holder.itemLogo)
 
         holder.itemView.setOnClickListener {
             clickListener(item)
