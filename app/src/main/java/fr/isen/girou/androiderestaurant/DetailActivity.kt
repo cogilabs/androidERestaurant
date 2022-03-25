@@ -32,6 +32,8 @@ class DetailActivity : AppCompatActivity() {
         btnPlus = findViewById(R.id.btnPlus)
         btnMinus = findViewById(R.id.btnMinus)
         selectView = findViewById(R.id.selectView)
+        selectView.text = selected.toString()
+        doTotal(item, selected)
 
         btnPlus.setOnClickListener {
             if (selected >= 0){
