@@ -15,6 +15,7 @@ internal class CategorieAdapter(private var itemsList: ArrayList<Item>,
 
         internal inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             var itemTextView: TextView = view.findViewById(R.id.itemTextView)
+            var priceTextView: TextView = view.findViewById(R.id.priceTextView)
             var itemLogo: ImageView = view.findViewById(R.id.itemLogo)
         }
 
@@ -27,6 +28,8 @@ internal class CategorieAdapter(private var itemsList: ArrayList<Item>,
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val item = itemsList[position]
         holder.itemTextView.text = item.name_fr
+        val prix: String = item.prices[0].price + "€"
+        holder.priceTextView.text = prix
 
         Picasso.get().load(item.images[0].ifEmpty { null }).placeholder(R.drawable.ic_launcher_foreground).into(holder.itemLogo)
 

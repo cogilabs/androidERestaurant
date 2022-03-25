@@ -5,6 +5,7 @@
     <string name="plats">Plats</string>
     <string name="logo">Logo</string>
     <string name="chargement" />
+    <string name="vide" />
     <string-array name="entreesList">
         <item tools:ignore="Typos">item1</item>
         <item>item2</item>
