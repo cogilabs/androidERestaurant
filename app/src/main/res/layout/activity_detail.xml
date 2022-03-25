@@ -41,4 +41,69 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titreDetail" />
 
+    <Button
+        android:id="@+id/btnTotal"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        app:cornerRadius="90dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnMinus"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:fontFamily="sans-serif-black"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:paddingTop="-5dp"
+        android:text="@string/minus"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:cornerRadius="90dip"
+        app:layout_constraintBottom_toBottomOf="@+id/selectView"
+        app:layout_constraintEnd_toStartOf="@+id/selectView"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/selectView" />
+
+    <Button
+        android:id="@+id/btnPlus"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:fontFamily="sans-serif-black"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/plus"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="90dip"
+        app:layout_constraintBottom_toBottomOf="@+id/selectView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toEndOf="@+id/selectView"
+        app:layout_constraintTop_toTopOf="@+id/selectView" />
+
+    <TextView
+        android:id="@+id/selectView"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btnTotal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailSlider"
+        app:layout_constraintVertical_bias="0.7" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
