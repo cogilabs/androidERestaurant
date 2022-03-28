@@ -13,8 +13,7 @@
         android:layout_height="5dp"
         android:layout_marginTop="80dp"
         android:indeterminate="true"
-        android:progressBackgroundTint="@color/light_salmon"
-        android:progressTint="@color/salmon"
+        android:indeterminateTint="@color/salmon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
