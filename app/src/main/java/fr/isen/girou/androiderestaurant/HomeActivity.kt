@@ -34,6 +34,11 @@ class HomeActivity : AppCompatActivity() {
             goToCategory(getString(R.string.desserts))
         }
 
+        binding.btnBluetooth.setOnClickListener {
+            val intent = Intent(this, BLEScanActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun goToCategory(categorie: String) {

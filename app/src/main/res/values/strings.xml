@@ -15,4 +15,6 @@
     <string name="image_du_carousel">Image du carousel</string>
     <string name="minus">-</string>
     <string name="plus">+</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="blebtn">BLEBtn</string>
 </resources>

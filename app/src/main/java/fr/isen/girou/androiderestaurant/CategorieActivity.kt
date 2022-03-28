@@ -32,7 +32,6 @@ class CategorieActivity : AppCompatActivity() {
         val nomCategorie = intent.getStringExtra("categorie")
         binding.titreCategorie.text = nomCategorie
 
-        //val entreesList = resources.getStringArray(R.array.entreesList).toList()
         val recyclerView: RecyclerView = binding.listeCategories
         val layoutManager = LinearLayoutManager(applicationContext)
         recyclerView.layoutManager = layoutManager
@@ -46,7 +45,7 @@ class CategorieActivity : AppCompatActivity() {
     }
 
     private fun getDataFromApi(category: String) {
-        val queue = Volley.newRequestQueue(this)
+        Volley.newRequestQueue(this)
         val url = "http://test.api.catering.bluecodegames.com/menu"
         val json = JSONObject()
         json.put("id_shop", "1")
