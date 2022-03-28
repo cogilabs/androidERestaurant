@@ -25,19 +25,19 @@ class BLEScanActivity : AppCompatActivity() {
         binding.scanBLEText.text = "Lancer le scan"
         binding.scanBLEBtn.setImageResource(R.drawable.ic_baseline_play_arrow_50)
         progressBar!!.visibility = View.INVISIBLE
+        progressBar!!.isIndeterminate = false
 
             binding.scanBLEBtn.setOnClickListener {
                 if (scanning) {
                     binding.scanBLEText.text = "Lancer le scan"
                     binding.scanBLEBtn.setImageResource(R.drawable.ic_baseline_play_arrow_50)
                     progressBar!!.visibility = View.INVISIBLE
-                    scanning = !scanning
                 } else {
-                        binding.scanBLEText.text = "Scan en cours..."
-                        binding.scanBLEBtn.setImageResource(R.drawable.ic_baseline_pause_50)
-                        progressBar!!.visibility = View.VISIBLE
-                        scanning = !scanning
+                    binding.scanBLEText.text = "Scan en cours..."
+                    binding.scanBLEBtn.setImageResource(R.drawable.ic_baseline_pause_50)
+                    progressBar!!.visibility = View.VISIBLE
                 }
+                scanning = !scanning
             }
     }
 }
