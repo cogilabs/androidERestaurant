@@ -28,7 +28,7 @@ internal class BLEScanAdapter(val bleList: ArrayList<ScanResult>, val clickListe
     override fun onBindViewHolder(holder: BLEViewHolder, position: Int) {
         val result = bleList[position]
         holder.puissanceTextView.text = result.rssi.toString()
-        holder.deviceTextView.text = result.device.name
+        holder.deviceTextView.text = result.device.name ?: "Nom inconnu"
         holder.macTextView.text = result.device.address
         holder.itemView.setOnClickListener{
             clickListener(result.device)
