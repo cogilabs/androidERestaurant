@@ -18,6 +18,7 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import fr.isen.girou.androiderestaurant.databinding.ActivityBlescanBinding
 
+@Suppress("DEPRECATION")
 class BLEScanActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityBlescanBinding
@@ -155,6 +156,6 @@ class BLEScanActivity : AppCompatActivity() {
     }
 
     companion object {
-        val DEVICE_KEY = "device"
+        const val DEVICE_KEY = "device"
     }
 }
