@@ -15,7 +15,7 @@ internal class CategorieAdapter(private var itemsList: ArrayList<Item>,
 
         internal inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             var itemTextView: TextView = view.findViewById(R.id.itemTextView)
-            var priceTextView: TextView = view.findViewById(R.id.macAddrTextView)
+            var priceTextView: TextView = view.findViewById(R.id.priceTextView)
             var itemLogo: ImageView = view.findViewById(R.id.itemLogo)
         }
 
