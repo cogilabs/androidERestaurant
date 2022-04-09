@@ -28,4 +28,11 @@
     <string name="scan_en_cours">Scan en cours...</string>
     <string name="ble_device_connecting">Statut : connexion</string>
     <string name="ble_device_disconnecting">Statut : déconnexion</string>
+    <string name="ble_device_write_characteristic_title">Ecrire la valeur</string>
+    <string name="ble_device_write_characteristic_confirm">Valider</string>
+    <string name="ble_device_write_characteristic_cancel">Annuler</string>
+    <string name="total">Total</string>
+    <string name="checkout">Check-Out</string>
+    <string name="toast">toast</string>
+    <string name="panier">Panier</string>
 </resources>

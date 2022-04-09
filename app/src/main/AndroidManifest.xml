@@ -19,6 +19,9 @@
         android:theme="@style/Theme.AndroidERestaurant"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".cart.ShoppingCartActivity"
+            android:exported="false" />
+        <activity
             android:name=".ble.DeviceDetailActivity"
             android:exported="false" />
         <activity

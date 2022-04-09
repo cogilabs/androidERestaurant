@@ -5,10 +5,14 @@ package fr.isen.girou.androiderestaurant
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import fr.isen.girou.androiderestaurant.ble.BLEScanActivity
+import fr.isen.girou.androiderestaurant.cart.ShoppingCartActivity
 import fr.isen.girou.androiderestaurant.databinding.ActivityHomeBinding
 
 
@@ -41,7 +45,28 @@ class HomeActivity : AppCompatActivity() {
         }
 
     }
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.menu, menu)
+        return true
+    }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.panier -> {
+                panier()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun panier() {
+        val intent = Intent(this, ShoppingCartActivity::class.java)
+        startActivity(intent)
+        Toast.makeText(this@HomeActivity, "panier", Toast.LENGTH_SHORT).show()
+        true
+    }
     private fun goToCategory(categorie: String) {
         val intent = Intent(this, CategorieActivity::class.java)
         intent.putExtra("categorie", categorie)

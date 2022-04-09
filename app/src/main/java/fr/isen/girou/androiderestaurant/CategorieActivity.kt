@@ -6,15 +6,12 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.android.volley.DefaultRetryPolicy
 import com.android.volley.Request
-import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.google.gson.Gson
 import fr.isen.girou.androiderestaurant.databinding.ActivityCategorieBinding
 import fr.isen.girou.androiderestaurant.model.DataResult
-import fr.isen.girou.androiderestaurant.model.Item
 import org.json.JSONObject
 
 class CategorieActivity : AppCompatActivity() {
@@ -70,7 +67,7 @@ class CategorieActivity : AppCompatActivity() {
     }
 
     companion object {
-        val ITEM_KEY = "item"
+        const val ITEM_KEY = "item"
     }
 
     private val tag = "LogCategorieActivity"
