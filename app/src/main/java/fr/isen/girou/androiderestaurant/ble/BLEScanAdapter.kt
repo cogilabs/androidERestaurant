@@ -1,4 +1,4 @@
-package fr.isen.girou.androiderestaurant
+package fr.isen.girou.androiderestaurant.ble
 
 import android.annotation.SuppressLint
 import android.bluetooth.BluetoothDevice
@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import fr.isen.girou.androiderestaurant.R
 
 internal class BLEScanAdapter(val bleList: ArrayList<ScanResult>, val clickListener: (BluetoothDevice) -> Unit) :
     RecyclerView.Adapter<BLEScanAdapter.BLEViewHolder>() {

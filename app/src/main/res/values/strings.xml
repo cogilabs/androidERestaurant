@@ -24,4 +24,6 @@
     <string name="ble_device_connected">Statut : connecté</string>
     <string name="ble_device_characteristic_read">Lecture</string>
     <string name="ble_device_characteristic_write">Ecriture</string>
+    <string name="lancer_scan">Lancer le scan</string>
+    <string name="scan_en_cours">Scan en cours...</string>
 </resources>

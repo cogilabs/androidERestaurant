@@ -1,4 +1,4 @@
-package fr.isen.girou.androiderestaurant
+package fr.isen.girou.androiderestaurant.ble
 
 import android.bluetooth.BluetoothGattCharacteristic
 import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup

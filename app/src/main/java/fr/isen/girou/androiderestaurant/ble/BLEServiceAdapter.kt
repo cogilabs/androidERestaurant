@@ -1,18 +1,16 @@
-package fr.isen.girou.androiderestaurant
+package fr.isen.girou.androiderestaurant.ble
 
 import android.bluetooth.BluetoothGattCharacteristic
-import android.text.Layout
-import android.text.TextDirectionHeuristic
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView
 import com.thoughtbot.expandablerecyclerview.ExpandableRecyclerViewAdapter
 import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup
 import com.thoughtbot.expandablerecyclerview.viewholders.ChildViewHolder
 import com.thoughtbot.expandablerecyclerview.viewholders.GroupViewHolder
+import fr.isen.girou.androiderestaurant.R
 
 class BLEServiceAdapter(bleServices: List<BLEService>) :
     ExpandableRecyclerViewAdapter<BLEServiceAdapter.ServiceViewHolder, BLEServiceAdapter.CharacteristicViewHolder>(bleServices) {

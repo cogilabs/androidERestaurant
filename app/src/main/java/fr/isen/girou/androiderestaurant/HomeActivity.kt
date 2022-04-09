@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import fr.isen.girou.androiderestaurant.ble.BLEScanActivity
 import fr.isen.girou.androiderestaurant.databinding.ActivityHomeBinding
 
 

@@ -1,10 +1,11 @@
-package fr.isen.girou.androiderestaurant
+package fr.isen.girou.androiderestaurant.ble
 
 import android.annotation.SuppressLint
 import android.bluetooth.*
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import fr.isen.girou.androiderestaurant.R
 import fr.isen.girou.androiderestaurant.databinding.ActivityDeviceDetailBinding
 
 @SuppressLint("MissingPermission")
@@ -35,7 +36,7 @@ class DeviceDetailActivity : AppCompatActivity() {
 
             override fun onServicesDiscovered(gatt: BluetoothGatt?, status: Int) {
                 super.onServicesDiscovered(gatt, status)
-                val bleServices = gatt?.services?.map { BLEService(it.uuid.toString(), it.characteristics)}
+                val bleServices = gatt?.services?.map { BLEService(it.uuid.toString(), it.characteristics) }
                     ?: arrayListOf()
                 val adapter = BLEServiceAdapter(bleServices.toMutableList())
                 runOnUiThread {

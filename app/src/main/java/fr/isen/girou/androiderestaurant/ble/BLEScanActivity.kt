@@ -1,4 +1,4 @@
-package fr.isen.girou.androiderestaurant
+package fr.isen.girou.androiderestaurant.ble
 
 import android.annotation.SuppressLint
 import android.bluetooth.BluetoothAdapter
@@ -16,6 +16,7 @@ import android.view.View
 import androidx.core.app.ActivityCompat
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
+import fr.isen.girou.androiderestaurant.R
 import fr.isen.girou.androiderestaurant.databinding.ActivityBlescanBinding
 
 @Suppress("DEPRECATION")
