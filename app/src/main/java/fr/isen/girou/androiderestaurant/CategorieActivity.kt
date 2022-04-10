@@ -3,6 +3,10 @@ package fr.isen.girou.androiderestaurant
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -10,6 +14,7 @@ import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.google.gson.Gson
+import fr.isen.girou.androiderestaurant.cart.ShoppingCartActivity
 import fr.isen.girou.androiderestaurant.databinding.ActivityCategorieBinding
 import fr.isen.girou.androiderestaurant.model.DataResult
 import org.json.JSONObject
@@ -68,6 +73,28 @@ class CategorieActivity : AppCompatActivity() {
 
     companion object {
         const val ITEM_KEY = "item"
+    }
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.panier -> {
+                panier()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun panier() {
+        val intent = Intent(this, ShoppingCartActivity::class.java)
+        startActivity(intent)
+        Toast.makeText(this@CategorieActivity, "panier", Toast.LENGTH_SHORT).show()
+        true
     }
 
     private val tag = "LogCategorieActivity"

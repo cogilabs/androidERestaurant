@@ -35,4 +35,6 @@
     <string name="checkout">Check-Out</string>
     <string name="toast">toast</string>
     <string name="panier">Panier</string>
+    <string name="quantity" />
+    <string name="itemAdded" />
 </resources>
